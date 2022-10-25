@@ -26,11 +26,11 @@ subplot(2, 3, 4); imshow(Isp); title("Salt & Pepper, d=0.15");
 % Filtered
 favg = fspecial("average");
 ISPA = imfilter(IG, favg);
-subplot(2, 3, 5); imshow(ISPA); title("Gaussian with Average");
+subplot(2, 3, 5); imshow(ISPA); title("Salt & Pepper with Average");
 rmse = sqrt(immse(ISPA, I));
 fprintf("S&P with Average filter: %f\n", rmse);
 
 ISPM = medfilt2(IG);
-subplot(2, 3, 6); imshow(ISPM); title("Gaussian with Median");
+subplot(2, 3, 6); imshow(ISPM); title("Salt & Pepper with Median");
 rmse = sqrt(immse(ISPM, I));
 fprintf("S&P with Mean filter: %f\n", rmse);
