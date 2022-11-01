@@ -5,15 +5,11 @@ figure; imshow(img, []); title("Rx Mão");
 disp(size(img));
 imwrite(img, "imagens\rx_gravado.tiff");
 % 1.2
-imgs = [
-    "imagens\rx_mao.jpg"
-    "imagens\rx_torax.jpg"
-    "imagens\Rx_bexiga.jpg"
-    "imagens\brain.jpg"
-    ];
+imgs = ["imagens\rx_mao.jpg", "imagens\rx_torax.jpg"
+    "imagens\Rx_bexiga.jpg", "imagens\brain.jpg"];
 titles = ["Rx Mão", "Rx Tórax", "Rx Bexiga", "Cérebro"];
 figure;
-for i = 1:4
+for i = 1 : 4
     I = imread(imgs(i));
     subplot(2, 2, i); imshow(I); title(titles(i));
 end
@@ -25,9 +21,7 @@ figure; imshow(I); impixelinfo;
 fprintf("Image dimensions: %d x %d\n", rows, cols);
 fprintf("Image bands: %d\n", bands);
 fprintf("Total pixels: %d\n", rows * cols);
-
-info = imfinfo(imgpath, "tif");
-disp(info);
+disp(imfinfo(imgpath, "tif"));
 % 1.4
 I = imread("imagens\retina.tif");
 [R, G, B] = imsplit(I);
@@ -42,5 +36,4 @@ I = ones(256, 256);
 I(90:190, 70:170) = 0;
 
 figure; imshow(I); title("Quadrado");
-
 imwrite(I, "imagens\quadrado.bmp");
