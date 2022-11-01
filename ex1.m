@@ -9,7 +9,7 @@ imgs = ["imagens\rx_mao.jpg", "imagens\rx_torax.jpg"
     "imagens\Rx_bexiga.jpg", "imagens\brain.jpg"];
 titles = ["Rx Mão", "Rx Tórax", "Rx Bexiga", "Cérebro"];
 figure;
-for i = 1 : 4
+for i = 1:4
     I = imread(imgs(i));
     subplot(2, 2, i); imshow(I); title(titles(i));
 end
@@ -26,7 +26,7 @@ disp(imfinfo(imgpath, "tif"));
 I = imread("imagens\retina.tif");
 [R, G, B] = imsplit(I);
 
-figure; 
+figure;
 subplot(2, 2, 1); imshow(I); title("Original");
 subplot(2, 2, 2); imshow(R); title("Red");
 subplot(2, 2, 3); imshow(G); title("Green");

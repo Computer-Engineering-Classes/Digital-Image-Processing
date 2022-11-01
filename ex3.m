@@ -3,7 +3,7 @@ I = imread("imagens\mamograma.tif");
 I_50 = imadd(I, 50);
 I_150 = imadd(I, 150);
 
-figure; 
+figure;
 subplot(1, 3, 1); imshow(I); title("Original");
 subplot(1, 3, 2); imshow(I_50); title("+50");
 subplot(1, 3, 3); imshow(I_150); title("+150");
@@ -64,10 +64,10 @@ figure;
 subplot(5, 5, 1); imshow(I); title("dif1.bmp");
 k1 = 1;
 k2 = 0;
-for i = 1 : 23
+for i = 1:23
     img_comb = imlincomb(k1, I, k2, I2);
     subplot(5, 5, i + 1); imshow(img_comb); title("It. " + num2str(i));
-    k1 = k1 - 1 / 23;
-    k2 = k2 + 1 / 23;
+    k1 = k1 - 1/23;
+    k2 = k2 + 1/23;
 end
 subplot(5, 5, 25); imshow(I2); title("dif2.bmp");

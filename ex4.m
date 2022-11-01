@@ -3,13 +3,13 @@ paths = ["imagens\fce_clara.bmp", "imagens\fce_escura.bmp"];
 titles = ["Clara", "Escura"];
 
 figure;
-for i = 1 : 2
+for i = 1:2
     I = imread(paths(i));
     ttl = titles(i);
-    subplot(2, 3, 3 * i - 2);  imshow(I); title(ttl);
+    subplot(2, 3, 3 * i - 2); imshow(I); title(ttl);
     [~, nbins] = imhist(I);
     subplot(2, 3, 3 * i - 1); imhist(I); title("Histograma");
-    subplot(2, 3, 3 * i); histogram(I, nbins, 'Normalization','pdf'); 
+    subplot(2, 3, 3 * i); histogram(I, nbins, 'Normalization', 'pdf');
     title("Histograma normalizado");
     fprintf("Face %s:\n", ttl);
     fprintf("Intensidade média: %f\n", mean2(I));
@@ -33,7 +33,7 @@ I = imread("imagens\retina.tif");
 [y_blue, ~] = imhist(B);
 
 figure;
-subplot(1, 3, 1);  imshow(R); title("Banda R");
+subplot(1, 3, 1); imshow(R); title("Banda R");
 subplot(1, 3, 2); imshow(G); title("Banda G");
 subplot(1, 3, 3); imshow(B); title("Banda B");
 
