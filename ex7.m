@@ -27,7 +27,7 @@ I5 = imfilter(I, h5);
 I_g = imfilter(I, hg);
 I_med = medfilt2(I);
 
-figure; imshow(img); title("Original"); figure;
+figure; imshow(I); title("Original"); figure;
 subplot(2, 2, 1); imshow(I3); title("Média 3x3");
 subplot(2, 2, 2); imshow(I5); title("Média 5x5");
 subplot(2, 2, 3); imshow(I_g); title("Gaussiano 5x5 σ=1");
