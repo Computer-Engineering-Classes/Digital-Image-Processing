@@ -27,6 +27,7 @@ for k = 1:length(lines)
     plot(xy(1, 1), xy(1, 2), 'x', 'LineWidth', 2, 'Color', 'yellow');
     plot(xy(2, 1), xy(2, 2), 'x', 'LineWidth', 2, 'Color', 'red');
 end
+
 % 9.2
 I = imread("imagens\bolas.jpg");
 imshow(I);
