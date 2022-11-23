@@ -66,12 +66,11 @@ fprintf("Thresholds:\n");
 fprintf("Otsu: %d\n", otsu_th * 255);
 fprintf("Peak/Valley: %d\n", pv_th);
 fprintf("Iterative: %d\n", iter_th);
-
 % 10.5
 clear, clc, close all
 I = imread("imagens\text_grad.bmp");
 %T = adaptivethreshold(I, 11, 7/255);
-T = adaptivethreshold(I, 15);
+T = adaptivethreshold(I, 15, 3/255);
 
 figure;
 subplot(1, 2, 1); imshow(I); title("Original");

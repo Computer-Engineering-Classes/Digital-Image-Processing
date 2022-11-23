@@ -1,5 +1,5 @@
-clc, clear, close all
 % 12.1
+clc, clear, close all
 I = imread("imagens\Texto_partido.tif");
 SE = strel("arbitrary", [0 1 0; 1 1 1; 0 1 0]);
 B = imdilate(I, SE);
@@ -8,6 +8,7 @@ figure;
 subplot(1, 2, 1); imshow(I); title("Original");
 subplot(1, 2, 2); imshow(B); title("Dilated with cross");
 % 12.2
+clc, clear, close all
 I = imread("imagens\wire_bond.tif");
 
 figure;
@@ -22,6 +23,7 @@ for i = 1:3
     title("Eroded with disk, r=" + int2str(r));
 end
 % 12.3 e 12.4
+clc, clear, close all
 I = imread("imagens\shape.tif");
 SE = strel('square', 20);
 Bo = imopen(I, SE);
@@ -34,6 +36,7 @@ subplot(2, 2, 2); imshow(Bo); title("Opened");
 subplot(2, 2, 3); imshow(Bc); title("Closed");
 subplot(2, 2, 4); imshow(B); title("Opened + Closed");
 % 12.5
+clc, clear, close all
 figure;
 SE1 = [0, 0, 0
        0, 1, 1
